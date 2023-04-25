@@ -29,6 +29,7 @@
 
     {% endfor %}
 
+    {% if user.is_authenticated %}
     <div class="container">
         <h2>Leave your comments</h2>
         <form action="{% url 'create_new_comment' id=city.id %}" method="POST" class="post-form">
@@ -38,7 +39,8 @@
             <button type="submit" class="save btn btn-dark">Save</button>
         </form>
     </div>
-    
+    {%endif%}
+
 </div>
 
 {% endblock %}

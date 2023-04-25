@@ -21,14 +21,9 @@
     <link rel="stylesheet" href="{% static 'flags/sprite.css' %}">
 </head>
 <body>
-    <div class="page-header">
-        <div class="container">
-            <h1><a href="/">Ciudades del Mundo</a></h1>
-        </div>
-            <h1>{{user.username}}</h1>
-      
-    </div>
-   
+    
+    {% include 'navbar.html' %}
+
     {% block content %}
     {% endblock %}
 

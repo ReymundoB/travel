@@ -1,0 +1,37 @@
+
+
+
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+   
+    
+  <div id="navb" class="navbar-collapse collapse hide">
+
+    <div class="page-header">
+        <div class="container">
+            <h1><a href="/">Ciudades del Mundo</a></h1>
+            <span>{{user.name}}</span>
+        </div>
+    </div>
+    
+    <ul class="nav navbar-nav ml-auto">
+        {% if user.is_authenticated %}
+            <li class="navbar-item  ">
+            <a href="{% url 'logout' %}" class="nav-link"><span class="fas fa-sign-in-alt"></span>Logout</a>
+
+            </li>
+        {% else %}
+
+          <li class="navbar-item {% if request.path == login %}active{%endif%}">
+            <a href="{% url 'login' %}" class="nav-link"><span class="fas fa-user"></span>Login</a>
+
+          
+        {%endif%}
+
+
+    </ul>
+
+
+
+  </div>
+
+</nav>

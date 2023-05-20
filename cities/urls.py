@@ -7,4 +7,8 @@ urlpatterns = [
     path('', views.index,name='index'),
     path('city/<int:id>', views.get_city,name='city'),
     path('city/<int:id>/create_new_comment', views.create_new_comment,name='create_new_comment'), #el name es lo que se envia al url de html
+    path('login/', views.loggin, name='loggin'),
+    path('logout/', views.loggout,name='loggout'),
+    path('register/', views.register,name='register'),
+
 ] 

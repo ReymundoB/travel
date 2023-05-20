@@ -33,3 +33,8 @@ h1 a, h1, h2, h3, h4, h5 {
     border-bottom: #19192E solid 1px;
 }
 
+.color-r{
+    background-color: #19192E;
+    font-size: 12pt;
+    font-family: 'Lobster';
+}

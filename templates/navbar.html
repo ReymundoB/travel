@@ -13,17 +13,23 @@
         </div>
     </div>
     
-    <ul class="nav navbar-nav ml-auto d-flex color-r ">
+    <ul class="nav navbar-nav ms-auto ">
         {% if user.is_authenticated %}
             <li class="navbar-item  ">
-            <a href="{% url 'loggout' %}" class="nav-link"><span class="fas fa-sign-in-alt"></span>Logout</a>
+            <a href="{% url 'loggout' %}" class="nav-link active"><span class="fas fa-sign-in-alt"></span>Logout</a>
 
             </li>
         {% else %}
 
-          <li class="navbar-item color-r {% if request.path == login %}active{%endif%}">
-            <a href="{% url 'loggin' %}" class="nav-link"><span ></span>Login</a>
-            <a href="{% url 'register' %}" class="nav-link"><span ></span>Sign Up</a>
+          <li class="navbar-item ">
+            <a href="{% url 'loggin' %}" class="nav-link active"><span ></span>Login</a>
+           
+
+          </li>
+          <li class="navbar-item ">
+          <a href="{% url 'register' %}" class="nav-link active"><span ></span>Sign Up</a>
+          </li>
+            
 
           
             
